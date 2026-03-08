@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <style>
+        /* Basic styling for accessibility and readability */
+        form {
+            max-width: 500px;
+            margin: auto;
+            font-family: Arial, sans-serif;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        label {
+            display: inline-block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], select, textarea {   
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            padding: 10px 15px; 
+            background-color: #007bff;
+            color: green;
+            border: none; 
+            cursor: pointer; 
+        }
+        button: hover {
+            background-color: #0056b3
+        }    
+        </style>
+</head>
+<body>
+    <h1>Software Engineer Position</h1>
+    <form method="POST" action="
+     <p>
+        <lable for="fullname">FULL Name:</lable>
+        <input type="text" id="fullname" name="fullname" required>
+     </p>
+     <p>
+        <label for="applicationRole">Application Role:</label>
+        <select id="applicationRole" name="applicationRole">
+            <option value="frontend">Frontend Developer</option>
+            <option value="backend">Backend Developer</option>
+            <option value="fullstack">Full Stack Developer</option>
+        </select>    
+     </p>
+     <p>
+        <label>Experience Level:</label><br>
+        <input type="radio" id="entry" name="experienceLevel" value="entry" required>
+        <label for="entry">Entry</label>
+        <input type="radio" id="senior" name="experienceLevel" value="senior" required>
+        <label for="senior">Senior</label>
+     </p>
+     <p>
+        <label for="coverLetter">Cover Letter:</label>
+        <textarea id="coverLetter" name="coverLetter" rows="6" required></textarea>
+     </p>
+     <p>
+        <button type="submit">Submit Application</button>
+     </p>
+    </form>     
+    </body>    
+</html>
