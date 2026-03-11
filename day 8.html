@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Flexbox Practice</title>
+</head>
+<body>
+    <div id="flex-container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+</body>
+<style>
+/* Container setup */
+#flex-container {
+    display: flex; 
+    height: 300px;
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center; 
+} 
+/* Item sizing */
+.box {
+    width: 80px;
+    height: 80px; 
+    background-color: lightblue;
+    margin: 5px;  
+}      
+/* Distribution change */
+#flex-container {
+    /* justify-content: space-between;
+}
+/* Direction change */
+#flex-container {
+    /* flex-direction: column;
+}
+/* Item order override */
+#flex-container div: nth-child{
+    /* order: -1; */
+}
+/* Individual Alignment */
+.box:nth-child(3) {
+    /* align-self: flex-start; */
+}
+/* Item growing */
+.box {
+    /* width: auto; */
+    /* flex-grow: 1; */               
+</style>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>   
+</head>
+<body>
+    <div class="gallery">
+        <img src="placeholder1.jpg" alt="Rose" class="gallery-item">
+        <img src="placeholder2.jpg" alt="Jasmine" class="gallery-item">
+        <img src="placeholder3.jpg" alt="Lotus" class="gallery-item">
+        <img src="placeholder4.jpg" alt="Sunflower" class="gallery-item">
+        <img src="placeholder5.jpg" alt="Lily" class="gallery-item">
+        <img src="placeholder6.jpg" alt="Hibiscus" class="gallery-item">
+    </div> 
+</body>
+<style>
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .gallery-item {
+        width: 150px;
+        height: 150px;
+        margin: 5px;
+        object-fit: cover;
+    }    
+</style>   
+</html>
