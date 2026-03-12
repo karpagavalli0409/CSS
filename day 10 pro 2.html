@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Content/sidebar Layout</title>
+    <style>
+        .page-layout {
+            display: flex;
+            flex-direction: column;
+        }
+        main, aside {
+            width: 100;
+        }
+        /* Desktop breakpoint */
+        @media (min-width: 992px) {
+            .page-layout {
+                flex-direction: row; 
+            }
+            main {
+                width: 70%; 
+            }
+            aside {
+                width: 30%; /* implicity set for the remaining space */
+            }
+        }              
+        </style>
+    </head> 
+    <body>
+        <div class="page-layout">
+            <main>
+                <h1>Main Content</h1>
+                <p>This is the primary blog content area.</p>        
+            </main>
+            <aside>
+                <h2>Sidebar</h2>
+                <p>This is the sidebar that stacks on mobile.</p>
+            </aside>
+        </div>
+    </body>       
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moblile-First Practice</title>    
+</head>
+<body>
+    <div id="main-container">
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+        <img src="MOBILE.jpg" alt="Placeholder image">
+    </div>
+</body>
+<style>
+/* Base (mobile) Styles */
+body {
+    background-color: lightcoral;
+}
+#main-container {
+    width: 90%; 
+    margin: 0 auto;
+}
+img {
+    max-width: 100%;   
+    height: auto;
+}
+/* Tablet Breakpoint */
+@media (min-width: 786px) {
+    body {
+        background-color: lightgreen; 
+    }
+    #main-container p {
+        font-size: 18px;
+    }
+}
+/* Desktop Breakpoint */
+@media (min-width: 1200px) {
+    body {
+        background-color: lightblue; 
+    }
+    #main-container {
+        width: 70%; 
+    }
+}                                 
+</style> 
+</html>
