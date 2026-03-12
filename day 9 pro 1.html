@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <title>Calendar Day Layout</title>
+</head>
+<body>
+    <div class="calendar">
+        <div class="date-heading">Date</div>
+        <div class="morning">Morning</div>
+        <div class="afternoon">Afternoon</div>
+        <div class="evening">Evening</div>
+    </div>
+</body> 
+<style>
+.caledar {
+    display: grid;
+    grid-template-columns: 100px 3fr; /* narrow column + wide column */
+    grid-template-rows: auto 1fr 1fr 1fr; /* heading + 3 equal rows */
+    gap: 5px; /* small gap between rows */
+}
+.date-heading {
+    grid-column: 1 / span 2; /* span both columns */
+    font-weight: bold; 
+    text-align: center;
+}           
+</style>   
+</html>
