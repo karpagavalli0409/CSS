@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 12 Practice</title>
+</head> 
+<body>
+    <h1>JavaScript Practice</h1>
+    <script>
+        const num1= 25;
+        const num2= 4;
+        let remainder= num1 % num2;
+        console.log(remainder);
+        let counter= 10;
+        counter+= 5;
+        console.log(counter);
+        console.log(5 === "5");
+        const isweekend= false;
+        const isHoliday= true;
+        if (isweekend || isHoliday) {
+            console.log("Time to relax");
+        }
+        const trafficLight= "red";
+        if (trafficLight=== "red") {
+            console.log("Stop!");
+        } else {
+            console.log("Go!");
+        }
+        if (trafficLight=== "red") {
+            console.log("Stop!");
+        } else if (trafficLight === "yellow") {
+            console.log("Slow Down.");
+        } else {
+            console.log("Go!");
+        }
+        const isRaining= true;
+        const hasUmbrella= false;
+        if (isRaining && !hasUmbrella) {
+            console.log("Stay inside.");
+        }
+        const productCode= "PRO";
+        switch (productCode) {
+            case "PRO":
+                console.log("Processor");
+                break;
+            case "RAM":
+                console.log("Memory");
+                break;
+            default:
+                console.log("Unknown Device");
+                break;
+        }
+        const studentScore= 75;
+        if (studentScore >70) {
+            console.log("Passed");
+        }
+        const hasError= false;
+        if(!hasError) {
+            console.log("System Clear");
+        }                                        
+    </script>
+</body> 
+</html>
