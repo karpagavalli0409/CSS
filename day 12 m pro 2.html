@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"content="width=device-width, initial-scale=1.0">
+    <title>Traffic Light Sequence</title>
+</head> 
+<body>
+    <script>
+      currentstate= "red";
+      nextstate;
+        switch(currentstate){
+            case"red":
+                nextstate="green";
+                break;
+            case"yellow":
+                nextstate="red";
+                break;
+            case "green":
+                nextstate="yellow";
+                break;
+            default:
+                nextstate= "invalid"
+        }
+        console.log("The light changes from ${currentstate} to ${nextstate}.");
+        document.write("The light changes from ${currentstate} to ${nextstate}.");       
+        
+
+        </script>
+</body>   
+</html>
