@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Array Processor and Validator</h1>
+    <script>
+        const isValidArray= arr=>arr.length>3;
+        function processList(arr) {
+            if(isValidArray(arr)) {
+                console.log(`Array length: ${arr.length}`);
+                document.write(`Arraylength: ${arr.length}<br>`);
+            }else{
+                console.log("List is too short to process.");
+                document.write("List is too short to process.");
+            }
+        } 
+        processList([1,2]);
+        processList([1,2,3,4,5]); 
+    </script>
+</body>    
+</html>
