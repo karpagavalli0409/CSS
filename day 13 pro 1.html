@@ -7,14 +7,16 @@
 <body>
     <h1>Data Aggregator</h1>
     <script>
-        const quizScores= [88, 95, 76, 100, 92];
-        let totalscore= 0;
-        for (let score of quizScores) {
-            totalscore += score;
+        const quizScores=[88,95,76,100,92];
+        let totalScore=0;
+        for(let i=0;i<quizScores.length;i++) {
+            totalScore+=quizScores[i];
         }
-        let averagescore= totalscore / quizScores.length;
-        console.log("Total Score:", totalScore);
-        console.log("Average Score:", averageScore);  
+        let averageScore=totalScore/quizScores.length;
+        console.log("Total Score:",totalScore);
+        console.log("Average Score:",averageScore);
+        document.write("Total Score: ${totalScore}<br>");
+        document.write("Average Score: ${averageScore}");
     </script>
 </body>  
 </html>
