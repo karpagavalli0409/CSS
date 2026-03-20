@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 15 Practice</title>
+</head>
+<body>
+    <h1>JavaScript Array Practice</h1>
+    <script>
+        const names=["Saravanan", "Kavitha", "Mugil Mathi"];
+        console.log("Initial names:", names);
+        names.push("Dheera");
+        console.log("After adding Dheera:", names);
+        const removedName= names.shift();
+        console.log("Removed name:", removedName);
+        console.log("Array after removal:", names);
+        const words=["hello", "word", "js"];
+        constupperwords= words.map(word=> word.toUpperCase());
+        console.log("Uppercase words:", upperwords);
+        const data=[10,5,20];
+        const incrementedData=data.map(num=>num+1);
+        console.log("Incremented data:",incrementedData);
+        const longwords=upperwords.filter(word=>word.length>4);
+        console.log("Long words:",longwords);
+        const temperatures=[32,10,25,40];
+        const lowTemps=temperatures.filter(temp=> temp <30);
+        console.log("Temperatures < 30:",lowTemps);
+        const sumData=incrementedData.reduce((acc,val)=> acc+val,0);
+        console.log("Sum of incremented data:", sumData);
+        const letters= ["A", "B", "C"];
+        const concatLetters= letters.reduce((acc, val) =>acc+val,"");
+        console.log("Concatenated letters:", concatLetters);
+        const finalSum= lowTemps
+        .filter(temp => temp <30)
+        .reduce((acc,val) => acc+val, 0);
+        console.log("Final sum of filtered temperatures:", finalSum);
+    </script>
+</body>    
+</html>

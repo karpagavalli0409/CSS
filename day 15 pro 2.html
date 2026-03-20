@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head> 
+<body>
+    <h1>Transaction Totals</h1>
+    <script>
+        const transactions= [
+            {name: "Product A", unitsSold: 10},
+            {name: "Product B", unitsSold: 20},
+            {name: "product C", unitsSold: 15}
+    ];
+    const totalUnitsSold= transactions.reduce((accumulator, transactions)=> {
+        return accumulator + transactions.unitsSold;
+    }, 0);
+    console.log("Total Units Sold:", totalUnitsSold);
+    </script>
+</body>   
+</html>
