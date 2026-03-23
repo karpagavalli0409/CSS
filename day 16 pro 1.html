@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Inventory Item Constructor</h1>
+    <script>
+        const productItem = {
+            name: "Sample Product",
+            basePrice: 100.0,
+            taxRate: 0.05,
+            calculateTaxedPrice: function() {
+                return this.basePrice + (this.basePrice * this.taxRate);
+            }
+        };
+        const finalPrice = productItem.calculateTaxedPrice();
+        console.log("Final Price with Tax:", finalPrice);
+        const productJson = JSON.stringify(productItem);
+        console.log("Product JSON (method excluded):", productJson);
+    </script>
+</body>   
+</html>

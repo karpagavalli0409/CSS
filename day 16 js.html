@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 16 Practice</title>
+</head>
+<body>
+    <h1>JavaScript Object Practice</h1>
+    <script>
+        const car = {
+            make: "Toyota",
+            model: "Camry",
+            year: 2020
+        };
+        console.log("Car Make:", car.make);
+        const prop = "year";
+        console.log("Car Year:", car[prop]);
+        car.color = "red";
+        console.log("Updated Car:", car);
+        car.engine = {hp: 250};
+        console.log("Car with Engine:", car);
+        console.log("Engine HP:", car.engine.hp);
+        car.describe = function() {
+            return `This car is a${this.make} ${this.model}.`;
+        };
+        console.log("Car Description:", car.describe());
+        const dataPoint = {x: 10, y: 20};
+        const jsonString = JSON.stringify(dataPoint);
+        console.log("JSON String:", jsonString);
+        const parsedData = JSON.parse(jsonString);
+        console.log("Parsed Data X:", parsedData.x);
+        const carJson = JSON.stringify(car);
+        console.log("Car JSON:", carJson);
+    </script>
+</body>
+</html>
