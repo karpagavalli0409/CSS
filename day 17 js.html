@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+</head> 
+<body>
+    <div id="container">
+        <h2 class="title"></h2>
+        <p></p>
+        <p></p>
+    </div>
+    <script>
+        const containerDiv = document.getElementById('container');
+        console.log(containerDiv);
+        const headerH2 = document.querySelector('.title');
+        console.log(headerH2);
+        headerH2.textContent = 'DOM Practice Header';
+        headerH2.style.color = 'blue';
+        const newP = document.createElement('p');
+        newP.textContent = 'This is a new paragraph.';
+        newP.setAttribute('data-status', 'created');
+        containerDiv.appendChild(newP);
+        const allParagraphs = document.querySelectorAll('p');
+        console.log(allParagraphs.length);
+        allParagraphs.forEach(p => {
+            p.style.backgroundColor = 'lightgray';
+        });
+    </script>
+</body>  
+</html>
