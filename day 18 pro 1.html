@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head> 
+<body>
+    <img id="toggle-image" src="flower.jfif" data-alt-src="flower1.jfif" alt="Toggle Image">
+    <script>
+        const toggleImage= document.getElementById('toggle-image');
+        toggleImage.addEventListener('click', function() {
+            const currentsrc = this.src;
+            const altSrc = this.dataset.altSrc;
+            if (currentsrc === altSrc) {
+                this.src = this.getAttribute('data-alt-src');
+            } else {
+                this.src =altSrc;
+            }
+        });
+    </script>
+</body>   
+</html>

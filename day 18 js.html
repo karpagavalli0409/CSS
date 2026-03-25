@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 18 Practice</title>
+</head>  
+<body>
+    <button id="color-btn">Change Color</button>
+    <div id="box"></div>
+    <input type="text" id="text-input">
+    <form id="myForm">
+        <button type="submit">Submit</button>
+    </form>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+    </style>
+    <script>
+        const colorBtn= document.getElementById('color-btn');
+        const box= document.getElementById('box');
+        colorBtn.addEventListener('click', () => {
+            box.style.backgroundColor= 'red';
+        console.log('Button clicked-box turned red');
+    });
+    const textInput= document.getElementById('text-input');
+    textInput.addEventListener('keyup', (e) =>{
+        console.log('Input value:', e.target.value);
+    });
+    const myForm= document.getElementById('myForm');
+    myForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        console.log('Form submission blocked.');
+    });
+    box.addEventListener('mouseover', () => {
+        box.style.border = '2px solid black';
+        console.log('Mouse over box');
+    });
+    box.addEventListener('mouseout', () => {
+        box.style.border= '';
+        console.log('Mouse out of box');
+    });
+    </script>
+</body>
+</html>
