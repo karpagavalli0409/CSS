@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 19 Practice</title>
+</head>  
+<body>
+    <form id="myForm">
+        <input type="text" id="phone-input" placeholder="Phone input">
+        <input type="text" id="data-input" placeholder="Data input">
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        const DIGITREGEX = /^\d+$/;
+        console.log(DIGITREGEX.test("12345"));
+        console.log(DIGITREGEX.test("123a45"));
+        function checkMinLength(value, min) {
+            return value.length >= min;
+        }
+        console.log(checkMinLength("hello", 5));
+        console.log(checkMinLength("hi", 5));
+        document.getElementById("myForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const dataInput = document.getElementById("data-input").value;
+            if (dataInput === "") {
+                alert("Field required.");
+                return;
+            }
+            const USERNAMEREGEX = /^[a-z0-9]+$/;
+            if(!USERNAMEREGEX.test(dataInput)) {
+                alert("Only lowercase letters and numbers allowed.");
+            }
+        });
+        const ZIPREGEX = /^\d{5}$/;
+        console.log(ZIPREGEX.test("90210"));
+        console.log(ZIPREGEX.test("9021"));
+    </script>
+</body>  
+</html>
