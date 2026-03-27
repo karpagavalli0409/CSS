@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head> 
+<body>
+    <h1>Data Validation and Filtering</h1>
+    <script>
+        async function processPosts() {
+            try {
+                const Response = await fetch('https:http://www.official-joke-api.appspot.com');
+                if(!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);         
+        }
+        const posts = await Response. json();
+        const filteredPosts = posts.filter(post => post.userId === 1);
+        const totalCount = filteredPosts.reduce((acc,_) => acc + 1, 0);
+        console.log(`Total posts for user 1: ${totalCount}`);
+    } catch (error) {
+        console.error('//jsonplaceholder.typicode.com/posts');
+        if(!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const posts = await response.json();
+        const filteredPosts = posts.filter(post => post.userId === 1);
+        const totalCount = filteredPosts.reduce((acc, _) => acc + 1, 0);
+        console.log(`Total posts for user 1: ${totalCount}`);
+    } catch (error) {
+        console.error('Network or API error:', error.message);
+    }
+}
+processPosts();
+    </script>
+</body>   
+</html>

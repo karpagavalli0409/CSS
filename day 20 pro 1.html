@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px;}
+    </style>
+</head>  
+<body>
+    <div>
+        <p id="quote-text">"Loading quote..."</p>
+        <p id="author"></p>
+        <button id="refresh-quote">Refresh Quote</button>
+    </div>
+
+    <script>
+        async function loadQuote() {
+            fetch('https:http://www.official-joke-api.appspot.com')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('quote-text').innerText = data.quote;
+                document.getElementById('author').innerText = "-Kanye West";
+            })
+            .catch (error => {
+                document.getElementById('quote-text').innerText = "Failed to load quote.";
+                console.error('Error:', error);
+            });
+        }
+        document.getElementById('refresh-quote').addEventListener('click', loadQuote);
+        loadQuote();
+    </script>
+</body>  
+</html>
